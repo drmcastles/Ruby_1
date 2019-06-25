@@ -12,7 +12,7 @@ if sideA**2 +  sideB**2 == sideC**2 or
 if sideA == sideB or
    sideB == sideC or
    sideA == sideC 
-   puts 'Этот треугольник прямоугольный и равнобедренный треугольник'
+   puts 'Этот треугольник прямоугольный и равнобедренный'
 end
 
 elsif sideA == sideB and
