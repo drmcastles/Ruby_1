@@ -6,26 +6,26 @@ puts 'Введите длину стороны С треугольника АBC'
 sideC = gets.chomp.to_f
 
 if sideA > sideB && sideA > sideC
-  gypotenuza = sideA
-  katet_1 = sideB
-  katet_2 = sideC
+  hypotenuse = sideA
+  cathetus_1 = sideB
+  cathetus_2 = sideC
 elsif sideB > sideA && sideB > sideC
-  gypotenuza = sideB
-  katet_1 = sideA
-  katet_2 = sideC
+  hypotenuse = sideB
+  cathetus_1 = sideA
+  cathetus_2 = sideC
 else
-  gypotenuza = sideC
-  katet_1 = sideA
-  katet_2 = sideB
+  hypotenuse = sideC
+  cathetus_1 = sideA
+  cathetus_2 = sideB
 end
 
-if katet_1 ** 2 + katet_2 ** 2 == gypotenuza ** 2
+if cathetus_1 ** 2 + cathetus_2 ** 2 == hypotenuse ** 2
   puts "Этот треугольник прямоугольный"
-if katet_1 == katet_2
+if cathetus_1 == cathetus_2
   puts "Этот треугольник равнобедренный"
 end
 
-elsif katet_1 == gypotenuza
+elsif cathetus_1 == hypotenuse
   puts "Этот треугольник равнобедренный и равносторонний, но не прямоугольный"
 else
   puts "Этот треугольник не прямогульный"
