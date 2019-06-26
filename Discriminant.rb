@@ -16,5 +16,5 @@ elsif D == 0
   x1 = - b + sqrt_D / 2 * a
   puts " D = #{D}\n x1 = #{x1}"
 else
-  puts " D = #{D}"
+  puts "Уравнение не имеет корней"
 end
