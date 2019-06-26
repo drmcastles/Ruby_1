@@ -1,23 +1,32 @@
-puts 'введите длину стороны А треугольника АBC'
+puts 'Введите длину стороны А треугольника АBC'
 sideA = gets.chomp.to_f
-puts 'введите длину стороны B треугольника ABC'
+puts 'Введите длину стороны B треугольника ABC'
 sideB = gets.chomp.to_f
-puts 'введите длину стороны С треугольника АBC'
+puts 'Введите длину стороны С треугольника АBC'
 sideC = gets.chomp.to_f
-if sideA**2 +  sideB**2 == sideC**2 or
-   sideA**2 +  sideC**2 == sideB**2 or
-   sideB**2 +  sideC**2 == sideA**2 
-   puts 'Этот треугольник прямоугольный' 
 
-if sideA == sideB or
-   sideB == sideC or
-   sideA == sideC 
-   puts 'Этот треугольник прямоугольный и равнобедренный'
+if sideA > sideB && sideA > sideC
+  gypotenuza = sideA
+  katet_1 = sideB
+  katet_2 = sideC
+elsif sideB > sideA && sideB > sideC
+  gypotenuza = sideB
+  katet_1 = sideA
+  katet_2 = sideC
+else
+  gypotenuza = sideC
+  katet_1 = sideA
+  katet_2 = sideB
 end
 
-elsif sideA == sideB and
-	  sideA == sideC 
-	  puts 'Этот треугольник равносторонний и равнобедренный, но не прямоугольный'
-else 
-	  puts 'Треугольник не является прямоугольным или равносторонним'	
+if katet_1 ** 2 + katet_2 ** 2 == gypotenuza ** 2
+  puts "Этот треугольник прямоугольный"
+if katet_1 == katet_2
+  puts "Этот треугольник равнобедренный"
+end
+
+elsif katet_1 == gypotenuza
+  puts "Этот треугольник равнобедренный и равносторонний, но не прямоугольный"
+else
+  puts "Этот треугольник не прямогульный"
 end
