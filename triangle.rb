@@ -25,7 +25,8 @@ if cathetus_1 == cathetus_2
   puts "Этот треугольник равнобедренный"
 end
 
-elsif cathetus_1 == hypotenuse
+elsif cathetus_1 == hypotenuse &&
+  cathetus_2 == hypotenuse
   puts "Этот треугольник равнобедренный и равносторонний, но не прямоугольный"
 else
   puts "Этот треугольник не прямогульный"
